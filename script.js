@@ -56,7 +56,7 @@ const createBoardPixels = () => {
         for (let i = 0; i < 5; i += 1) {
             const createPixel = document.createElement('div');
             createPixel.className = 'pixel';
-            createPixel.style.backgroundColor = 'white';
+            createPixel.style.backgroundColor = 'rgb(255, 0, 225)';
             divPixel.appendChild(createPixel);
         };
         pixelBoard.appendChild(divPixel);

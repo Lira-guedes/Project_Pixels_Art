@@ -29,7 +29,7 @@ body {
     margin: 20px 10px 0 10px;
     border: solid black 1px ;
     border-radius: 18px;
-    background-color: white;
+    background-color: rgb(255, 0, 225);
 }
 
 #button-random-color {
@@ -63,6 +63,9 @@ margin: 60px;
     height: 40px;
     border: solid black 1px;
     border-radius: 7px;
+}
+div .pixel{
+    background-color: rgb(255, 0, 225);
 }
 
 .selected {
