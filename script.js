@@ -24,6 +24,7 @@ const createRandomColors = () => {
   return randomColor;
 };
 
+
 const addRandomColors = () => {
     randomColorsButton.addEventListener('click', () => {
         const arrayDeColors = [];
@@ -37,14 +38,16 @@ addRandomColors();
 
 const getItemRandomColors = () => {
     const randomColor = localStorage.getItem('colorPalette');
-
     if (randomColor) {
         const jsonColors = JSON.parse(randomColor);
         for (let i = 1; i < colorPalett.length; i += 1) {
             colorPalett[i].style.backgroundColor = jsonColors[i - 1];
         }
+    } else {
+            colorPalett[1].style.backgroundColor = 'green';
+            colorPalett[2].style.backgroundColor = 'red';
+            colorPalett[3].style.backgroundColor = 'blue';
     }
-    
 };
 getItemRandomColors();
 
@@ -56,7 +59,7 @@ const createBoardPixels = () => {
         for (let i = 0; i < 5; i += 1) {
             const createPixel = document.createElement('div');
             createPixel.className = 'pixel';
-            createPixel.style.backgroundColor = 'rgb(255, 0, 225)';
+            createPixel.style.backgroundColor = 'white';
             divPixel.appendChild(createPixel);
         };
         pixelBoard.appendChild(divPixel);
@@ -80,7 +83,11 @@ const colorsPixels = () => {
         pixels[i].addEventListener('click', (event) => {
             const pixelSelected = event.target;
             pixelSelected.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-            localStorage.setItem('pixelBoard', JSON.stringify(pixelSelected));
+            const arrayDePixels = [];
+            for (let e = 0; e < pixels.length; e += 1) {
+                arrayDePixels.push(pixels[e].style.backgroundColor);
+            }
+            localStorage.setItem('pixelBoard', JSON.stringify(arrayDePixels));
         });
     };
 };
@@ -89,6 +96,7 @@ colorsPixels();
 const getColorsPixels = () => {
     const linhas = document.querySelectorAll('.pixel');
     const pixelB = localStorage.getItem('pixelBoard');
+
     if (pixelB) {
         const savedColoredPixels = JSON.parse(pixelB);
         for (let i = 0; i < linhas.length; i += 1) {
