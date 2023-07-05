@@ -100,7 +100,7 @@ const getColorsPixels = () => {
     if (pixelB) {
         const savedColoredPixels = JSON.parse(pixelB);
         for (let i = 0; i < linhas.length; i += 1) {
-            linhas[i].style.backgroundColor = savedColoredPixels[i - 1];
+            linhas[i].style.backgroundColor = savedColoredPixels[i];
         };
     }
 }
