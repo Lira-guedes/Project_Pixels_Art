@@ -10,7 +10,7 @@ Funcionalidades
 - Grade de Pixels: Uma grade personalizável onde cada célula pode ser preenchida com a cor selecionada.
 - Geração de Cores Aleatórias: Gere automaticamente cores aleatórias para a paleta.
 - Limpar Quadro: Redefina a grade para começar um novo design.
-- 
+  
 Tecnologias Utilizadas
 - HTML/CSS: Estrutura e estilização da aplicação.
 - JavaScript: Lógica para seleção de cores, manipulação da grade e geração de cores aleatórias.
